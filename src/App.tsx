@@ -11,6 +11,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import EquipmentPage from "./pages/Equipment";
 import AddLogPage from "./pages/AddLog.tsx";
 import LogsPage from "./pages/Logs.tsx";
+import Layout from "./components/Layout.tsx";
 
 const queryClient = new QueryClient();
 
@@ -24,12 +25,13 @@ const App = () => (
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route element={<ProtectedRoute />}>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/equipment" element={<EquipmentPage />} />
-              <Route path="/add-log" element={<AddLogPage />} />
-              <Route path="/logs" element={<LogsPage />} />
+              <Route element={<Layout />}>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/equipment" element={<EquipmentPage />} />
+                <Route path="/add-log" element={<AddLogPage />} />
+                <Route path="/logs" element={<LogsPage />} />
+              </Route>
             </Route>
-            {/* ADD ALL CUSTOM ROUTES INSIDE THE PROTECTED ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
