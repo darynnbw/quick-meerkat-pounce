@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import EquipmentPage from "./pages/Equipment";
+import AddLogPage from "./pages/AddLog";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
             <Route element={<ProtectedRoute />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/equipment" element={<EquipmentPage />} />
+              <Route path="/add-log" element={<AddLogPage />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES INSIDE THE PROTECTED ROUTE */}
             <Route path="*" element={<NotFound />} />

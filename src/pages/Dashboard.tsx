@@ -45,9 +45,11 @@ const Dashboard = () => {
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-muted-foreground">Record a new temperature reading for one of your pieces of equipment.</p>
-            <Button disabled>
-              <PlusCircle className="mr-2 h-4 w-4" />
-              Add New Log (Coming Soon)
+            <Button asChild>
+              <Link to="/add-log">
+                <PlusCircle className="mr-2 h-4 w-4" />
+                Add New Log
+              </Link>
             </Button>
           </CardContent>
         </Card>
