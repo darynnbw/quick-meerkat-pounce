@@ -20,3 +20,9 @@ export type Log = {
   out_of_range: boolean;
   created_at: string;
 };
+
+export type LogWithEquipment = Log & {
+  equipment: {
+    name: string;
+  } | null;
+};
