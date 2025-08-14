@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { MadeWithDyad } from './made-with-dyad';
+import { MadeWithDyad } from './made-with-dyad.tsx';
 
 const Layout = () => {
   return (
