@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import { Equipment } from '@/types/database';
-import { AddLogForm } from '@/components/logs/AddLogForm.tsx';
+import { AddLogForm } from '@/components/logs/AddLogForm';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
