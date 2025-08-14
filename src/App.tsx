@@ -10,7 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import EquipmentPage from "./pages/Equipment";
 import AddLogPage from "./pages/AddLog.tsx";
-import LogsPage from "./pages/Logs";
+import LogsPage from "./pages/Logs.tsx";
 
 const queryClient = new QueryClient();
 
